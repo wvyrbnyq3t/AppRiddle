@@ -4,7 +4,7 @@ const loading = document.getElementById("loading");
 
 // Web API
 const apiUrl =
-"https://script.google.com/macros/s/AKfycbxvQ4ZH6O3s6EebcZPuXL9_pnRYbCE3DzaGKXURhTrhUmWVdTZYu0_dj9CmbeyjAzIEiA/exec";
+"";
 
 // get data
 fetch(`${apiUrl}?request=events`)
