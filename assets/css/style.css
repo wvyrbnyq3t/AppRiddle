@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background-color: #f7f5f5;
+  background-color: #fff;
   color: var(--c-txt);
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.4rem;
@@ -48,12 +48,12 @@ body {
   main {
     .contentBody {
       display: grid;
-      gap: 1.6rem;
+      gap: 2.4rem;
       padding: 1.6rem;
 
       section {
         display: grid;
-        gap: 1.2rem;
+        gap: 1.6rem;
 
         .secTitle {
           font-size: 2rem;
@@ -209,6 +209,11 @@ body {
 .icn-close {
   &::before {
     content: "\e5cd";
+  }
+}
+.icn-arrow-drop-down {
+  &::before {
+    content: "\e5c5";
   }
 }
 .icn-home {

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
@@ -26,56 +27,36 @@
     />
   </head>
   <body>
+    <div id="loading">
+      <svg width="48" height="48" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_b2T7{animation:spinner_xe7Q .8s linear infinite}.spinner_YRVV{animation-delay:-.65s}.spinner_c9oY{animation-delay:-.5s}@keyframes spinner_xe7Q{93.75%,100%{r:3px}46.875%{r:.2px}}</style><circle class="spinner_b2T7" cx="4" cy="12" r="3"/><circle class="spinner_b2T7 spinner_YRVV" cx="12" cy="12" r="3"/><circle class="spinner_b2T7 spinner_c9oY" cx="20" cy="12" r="3"/></svg>
+    </div>
     <div class="pageContent">
       <main>
         <div class="contentBody">
-          <section>
-            <h2 class="secTitle">パークチケット</h2>
-            <div class="columnWrap">
-              <div class="columnItem">
-                <a href="" class="btn-icn icn-ticket t-center">
-                  <span>新規<br />チケット購入</span>
-                </a>
+          <div class="table" id="tableEvents" style="--i: 4;">
+            <div class="row header">
+              <div class="cell">タイムスタンプ</div>
+              <div class="cell">
+                <select name="userStatus" id="filter">
+                  <option value="all">すべて</option>
+                  <option value="message">メッセージ</option>
+                  <option value="follow">フォロー</option>
+                  <option value="postback">ポストバック</option>
+                  <option value="unsend">送信取り消し</option>
+                </select>
               </div>
-              <div class="columnItem">
-                <a href="" class="btn-icn icn-qr t-center">
-                  <span>チケット読み込み</span>
-                </a>
+              <div class="cell">ユーザーネーム</div>
+              <div class="cell">メッセージ</div>
+            </div>
+            <div class="skeleton" id="tableEventsRow">
+              <div class="row">
+                <div class="cell time"></div>
+                <div class="cell type"></div>
+                <div class="cell userName"></div>
+                <div class="cell msg"></div>
               </div>
             </div>
-            <a href="" class="btn-secondary w-100"
-              >パーク・インフォメーション</a
-            >
-          </section>
-          <section>
-            <h2 class="secTitle t-center">
-              パークに行く前にかかさずチェック！
-            </h2>
-            <p>
-              東京ディズニーリゾートに行、事前に準備しておくと便利な情報などをまとめました
-            </p>
-            <img
-              src="https://media2.tokyodisneyresort.jp/home/top/check-app03.jpg"
-              alt=""
-            />
-            <ul class="list-border-dotted">
-              <li class="listItem">
-                <p>東京ディズニーリゾートアプリ</p>
-              </li>
-              <li class="listItem">
-                <p>東京ディズニーリゾート 40 周年記念プライオリティパス</p>
-              </li>
-              <li class="listItem">
-                <p>ディズニー・プレミアアクセス</p>
-              </li>
-              <li class="listItem">
-                <p>スタンバイパス</p>
-              </li>
-              <li class="listItem">
-                <p>エントリー受付</p>
-              </li>
-            </ul>
-          </section>
+          </div>
         </div>
       </main>
     </div>
