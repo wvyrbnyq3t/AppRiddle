@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (userInfo === null) {
       window.location.href = "register.html";
     }
-    if (userInfo.userName == "" && userInfo.UUID == "") {
+    if (userInfo.userName != "" && userInfo.UUID != "") {
       window.location.href = "register.html";
     }
   }
