@@ -1,0 +1,40 @@
+.form {
+  display: grid;
+  gap: calc(var(--gutter) * 0.75);
+  .form-group {
+    display: grid;
+    gap: calc(var(--gutter) * 0.25);
+
+    label {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      width: 100%;
+    }
+
+    .form-input {
+      border-radius: .4rem;
+      outline: .1rem solid var(--c-gray);
+      overflow: hidden;
+      padding: 0.8rem;
+      width: 100%;
+
+      &:focus {
+        outline-color: var(--c-primary);
+      }
+
+      &.is-err {
+        border-color: var(--c-red);
+      }
+    }
+    .form-err {
+      color: var(--c-red);
+      font-weight: 700;
+      visibility: hidden;
+
+      &.is-show {
+        visibility: visible;
+      }
+    }
+  }
+}

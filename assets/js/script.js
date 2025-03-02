@@ -1,4 +1,3 @@
-// ローディング
 console.log("load script.js");
 
 // カルーセルの子要素の個数
