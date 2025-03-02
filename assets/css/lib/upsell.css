@@ -1,0 +1,42 @@
+#upsell {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  visibility: hidden;
+  width: min(100dvw, var(--w-pc));
+  z-index: 999;
+
+  .upsellContent {
+    background-color: #fff;
+    box-shadow: 0 0 0.1rem #333;
+    padding: 1.6rem 1.6rem calc(3.2rem + env(safe-area-inset-bottom));
+    transform: translate(0, 100%);
+    transition: all 0.4s;
+    visibility: hidden;
+
+    &.is-show {
+      transform: none !important;
+      visibility: visible;
+    }
+
+    .upsellContentHeader {
+      display: flex;
+      align-items: center;
+      margin-bottom: calc(var(--gutter) * 0.75);
+
+      .title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        width: 100%;
+      }
+      .btn-closeUpsell {
+        margin-left: auto;
+      }
+    }
+    .upsellContentBody {
+      display: grid;
+      gap: calc(var(--gutter) * 0.5);
+    }
+  }
+}

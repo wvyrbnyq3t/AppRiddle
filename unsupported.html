@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/lib/modal.css" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
@@ -26,14 +27,40 @@
     />
   </head>
   <body>
+    <div id="modal">
+      <div class="overlay"></div>
+      <div class="center">
+        <div class="modalContent" data-modal="openInNew">
+          <button type="button" class="icn icn-close btn-closeModal"></button>
+          <p>新しいタブで開きます</p>
+          <a href="" class="btn-primary w-100 link-confirm" target="_blank"
+            >開く</a
+          >
+        </div>
+      </div>
+    </div>
     <div class="pageContent">
       <main>
         <div class="contentBody">
           <section>
-            <h2 class="secTitle t-center">お使いの端末はサポートされていません</h2>
+            <h1 class="pageTitle">お使いの端末はサポートされていません</h1>
             <p>
-              本イベントを遊ぶためには、スマートフォン端末が必要です。
+              誠に申し訳ございませんが、お使いの端末ではイベントに参加することができません。対尾するデバイスや環境をご確認の上、再度アクセスしていただきますようお願いします。
             </p>
+            <ul class="list-dotted">
+              <li class="list-item">
+                iPhone
+              </li>
+              <li class="list-item">
+                Android
+              </li>
+            </ul>
+            <a
+              href="https://welcome.hosei-u.com/"
+              class="btn-secondary w-100"
+              target="_blank"
+              >新入生歓迎会について</a
+            >
           </section>
         </div>
       </main>
@@ -44,5 +71,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/lib/modal.js"></script>
   </body>
 </html>

@@ -57,6 +57,9 @@
           margin-bottom: var(--gutter);
         }
       }
+      .btn-closeModal.icn-close {
+        margin-left: auto;
+      }
       .container {
         > *:not(:last-child) {
           margin-bottom: calc(var(--gutter) / 2);

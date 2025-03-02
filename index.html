@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/lib/slider.css" />
+    <link rel="stylesheet" href="./assets/css/lib/modal.css" />
+    <link rel="stylesheet" href="./assets/css/lib/upsell.css" />
+    <link rel="stylesheet" href="./assets/css/lib/scanQR.css" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
@@ -26,24 +30,72 @@
     />
   </head>
   <body>
+    <div id="upsell">
+      <div class="upsellContent bgc-red" data-upsell="cameraPermission">
+        <div class="upsellContentHeader">
+          <button type="button" class="icn icn-small icn-close btn-closeUpsell"></button>
+        </div>
+        <div class="upsellContentBody">
+          <p>二次元コードをスキャンするためには、カメラ機能を有効にしてください。</p>
+        </div>
+      </div>
+    </div>
+    <div id="slider">
+      <div class="sliderContent sliderContent-bottom" data-slider="scanQR">
+        <div class="sliderContentHeader">
+          <button type="button" class="btn-closeSlider btn-stopScanQR"></button>
+          <div class="title">二次元コードをスキャン</div>
+        </div>
+        <div class="sliderContentBody scanQRBody">
+          <canvas id="scanQRCanvas"></canvas>
+        </div>
+      </div>
+    </div>
+    <div id="modal">
+      <div class="overlay"></div>
+      <div class="center">
+        <div class="modalContent" data-modal="openInNew">
+          <button type="button" class="icn icn-close btn-closeModal"></button>
+          <p>新しいタブで開きます</p>
+          <a href="" class="btn-primary w-100 link-confirm" target="_blank"
+            >開く</a
+          >
+        </div>
+      </div>
+    </div>
     <div class="pageContent">
       <main>
         <div class="contentBody">
           <section>
-            <h2 class="secTitle">謎を探す</h2>
-            <button type="button" class="btn-secondary w-100">
-              二次元コードをスキャン
-            </button>
+            <h2 class="secTitle">ユーザー設定</h2>
           </section>
           <section>
-            <h2 class="secTitle">集めたワード</h2>
-            <p>集めたワードはまだありません。構内を探してワードを集めよう！</p>
+            <h2 class="secTitle">謎を探す</h2>
+            <button
+              type="button"
+              class="btn-secondary w-100 btn-openSlider btn-bootScanQR"
+              data-slider="scanQR"
+            >
+              二次元コードをスキャン
+            </button>
           </section>
           <section>
             <h2 class="secTitle">ピックアップ</h2>
             <div class="carousel carousel-banner">
               <div class="carousel-item">
-                <div class="imgbox">
+                <div class="imgBox">
+                  <img
+                    src="https://media2.tokyodisneyresort.jp/home/tdr/pickup/202212/fantasysprings.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="txtBox">
+                  <p class="title">ファンタジースプリングスグランドオープン</p>
+                  <p>2024年6月6日～</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="imgBox">
                   <img
                     src="https://media2.tokyodisneyresort.jp/home/topics/event/vanellope/main.jpg"
                     alt=""
@@ -52,22 +104,21 @@
                 <div class="txtBox">
                   <p class="title">
                     ディズニー・パルパルーザ第 3
-                    弾『ヴァネロペのスィーツ・ポップ・ワールド』
+                    弾『ヴァネロペノスウィーツ・ポップ・ワールド』
                   </p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="imgbox">
-                  <img
-                    src="https://media2.tokyodisneyresort.jp/home/tdr/pickup/202411/spring_disney.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="txtBox">
-                  <p class="title">春ディズニー</p>
+                  <p>2025年1月15日～2025年3月16日</p>
                 </div>
               </div>
             </div>
+          </section>
+          <section>
+            <h2 class="secTitle">新入生歓迎会について</h2>
+            <a
+              href="https://welcome.hosei-u.com/"
+              class="btn-secondary btn-icn btn-icn-openInNew w-100"
+              target="_blank"
+              >新入生歓迎会HPページ</a
+            >
           </section>
         </div>
       </main>
@@ -77,19 +128,12 @@
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/script.js"></script>
-    <script>
-      // 端末判別
-      document.addEventListener("DOMContentLoaded", () => {
-        const userAgent = window.navigator.userAgent.toLowerCase();
-        const isMobile = /iphone|android/.test(userAgent);
-
-        if (!isMobile) {
-          window.location.href = "unsupported.html";
-        }
-      });
-
-      // ログイン情報
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/userAgent.js" defer></script>
+    <script src="./assets/js/lib/slider.js" defer></script>
+    <script src="./assets/js/lib/modal.js" defer></script>
+    <script src="./assets/js/lib/upsell.js" defer></script>
+    <script src="./assets/js/lib/scanQR.js" defer></script>
   </body>
 </html>

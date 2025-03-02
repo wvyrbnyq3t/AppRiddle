@@ -37,18 +37,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/script.js"></script>
-    <script>
-      // 端末判別
-      document.addEventListener("DOMContentLoaded", () => {
-        const userAgent = window.navigator.userAgent.toLowerCase();
-        const isMobile = /iphone|android/.test(userAgent);
-
-        if (!isMobile) {
-          window.location.href = "unsupported.html";
-        }
-      });
-
-      // ログイン情報
-    </script>
+    <script src="./assets/js/userAgent.js"></script>
   </body>
 </html>

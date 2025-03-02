@@ -1,0 +1,15 @@
+.scanQRBody {
+  position: relative;
+
+  #scanQRCanvas {
+    background-color: #f4fcff;
+    display: block;
+    height: 100dvh;
+    width: min(100dvw, var(--w-pc));
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

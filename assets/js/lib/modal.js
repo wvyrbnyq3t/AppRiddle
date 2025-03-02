@@ -36,4 +36,4 @@ overlay.addEventListener("click", () => {
   });
 });
 
-console.log("loaded");
+console.log("load modal.js");

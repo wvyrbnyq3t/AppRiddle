@@ -28,6 +28,7 @@ body {
 
   main {
     .contentBody {
+      min-height: calc(100dvh - (var(--gutter) * 2));
       .pageTitle {
         font-size: 2.4rem;
         font-weight: 700;
@@ -40,7 +41,7 @@ body {
         }
 
         > *:not(:last-child) {
-          margin-bottom: calc(var(--gutter) / 2);
+          margin-bottom: calc(var(--gutter) * 0.75);
         }
 
         .secTitle {
@@ -50,23 +51,39 @@ body {
       }
     }
   }
+  nav {
+    background-color: red;
+    border: 0.1rem solid #000;
+    margin-left: calc((-1) * var(--gutter));
+    margin-bottom: calc((-1) * var(--gutter));
+    padding: 3.2rem 1.6rem calc(3.2rem + env(safe-area-inset-bottom));
+    position: sticky;
+    bottom: 0;
+    left: 50%;
+    width: min(
+      calc(100% + var(--gutter) * 2),
+      calc(var(--w-pc) + var(--gutter) * 2)
+    );
+    z-index: 100;
+  }
+}
+
+/* background color */
+.bgc-red {
+  background-color: var(--c-red) !important;
+  color: #fff !important;
 }
 
 /* button style */
 .btn-primary {
   background-color: var(--c-primary);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   color: #fff;
   display: inline-block;
   font-weight: 700;
-  padding: 1.2rem 3.6rem;
+  padding: 0.75em 2.5em;
   text-align: center;
   width: fit-content;
-
-  &[aria-disabled="true"] {
-    background-color: var(--c-gray);
-    cursor: not-allowed;
-  }
 }
 .btn-secondary {
   border: 0.1rem solid var(--c-primary);
@@ -74,9 +91,37 @@ body {
   color: var(--c-primary);
   display: inline-block;
   font-weight: 700;
-  padding: 1.2rem 3.6rem;
+  padding: 0.75em 2.5em;
   text-align: center;
   width: fit-content;
+}
+
+.btn-icn {
+  padding-right: 3.5em !important;
+  position: relative;
+  &::before {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5em; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translate(0, -50%);
+  }
+}
+.btn-icn-openInNew {
+  &::before {
+    content: "\e89e";
+  }
 }
 
 /* carousel */
@@ -88,6 +133,7 @@ body {
   padding: 0.05rem;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  width: 100%;
 
   &::-webkit-scrollbar {
     display: none;
@@ -96,9 +142,14 @@ body {
   .carousel-item {
     box-shadow: 0 0 0.1rem #333;
     scroll-snap-align: center;
+    width: 100%;
 
     .txtBox {
       padding: 0.8rem;
+
+      > *:not(:last-child) {
+        margin-bottom: calc(var(--gutter) * 0.25);
+      }
 
       .title {
         font-weight: 700;
@@ -114,30 +165,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* form style */
-.form-input {
-  border-radius: 0.4rem;
-  display: block;
-  outline: .1rem solid var(--c-gray);
-  padding: 0.8rem;
-  width: 100%;
-
-  &:focus {
-    outline-color: var(--c-primary);
-  }
-}
-.form-err {
-  color: var(--c-red);
-  display: none;
-
-  &.is-show {
-    display: block;
-  }
-}
-
 /* divider */
 .divider-bottom {
-  border-bottom: .1rem solid var(--c-gray);
+  border-bottom: 0.1rem solid var(--c-gray);
+  margin-bottom: var(--gutter);
   padding-bottom: var(--gutter);
 }
 
@@ -146,11 +177,9 @@ body {
   display: block;
   height: 2.4rem;
   width: 2.4rem;
-  overflow: hidden;
   position: relative;
 
   &::before {
-    color: var(--c-primary);
     font-family: "Material Symbols Outlined";
     font-weight: normal;
     font-style: normal;
@@ -167,18 +196,48 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 2.4rem;
+    width: 2.4rem;
   }
 }
-.icn-arrow-left::before {
-  content: "\e5e0";
+
+.icn-small {
+  height: 2rem;
+  width: 2rem;
+
+  &::before {
+    font-size: 20px;
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+.icn-close {
+  &::before {
+    content: "\e5cd";
+  }
 }
 
 /* image */
 .img-fullVis {
-  img {
-    display: block;
-    margin-left: calc(-1 * var(--gutter));
-    width: calc(100% + 2 * var(--gutter));
+  width: calc(100% + var(--gutter) * 2);
+  margin-left: calc((-1) * var(--gutter));
+}
+
+/* list style */
+.list-dotted {
+  .list-item {
+    padding-left: 1em;
+    position: relative;
+
+    &::before {
+      content: "・";
+      display: block;
+      font-size: 1em;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }
 
