@@ -1,39 +1,106 @@
 .form {
-  display: grid;
-  gap: calc(var(--gutter) * 0.75);
   .form-group {
-    display: grid;
-    gap: calc(var(--gutter) * 0.25);
-
-    label {
+    &:not(:last-child) {
+      border-bottom: .1rem solid var(--c-gray);
+      padding-bottom: var(--gutter);
+      margin-bottom: var(--gutter);
+    }
+    > *:not(:last-child) {
+      margin-bottom: 0.5em;
+    }
+    .form-label {
+      border-left: 0.5rem solid var(--c-txt);
       display: block;
       font-size: 1.6rem;
       font-weight: 700;
-      width: 100%;
+      padding: 0.25rem 0 0.25rem 0.75em;
     }
-
-    .form-input {
-      border-radius: .4rem;
-      outline: .1rem solid var(--c-gray);
+    input[type="text"] {
+      border-radius: 0.4rem;
+      display: block;
+      outline: 0.2rem solid var(--c-gray);
       overflow: hidden;
       padding: 0.8rem;
       width: 100%;
 
       &:focus {
-        outline-color: var(--c-primary);
+        outline-color: var(--c-blue);
       }
-
       &.is-err {
-        border-color: var(--c-red);
+        background-color: #ffebeb !important;
+        outline-color: var(--c-red);
       }
     }
     .form-err {
       color: var(--c-red);
-      font-weight: 700;
-      visibility: hidden;
+      display: none;
 
-      &.is-show {
-        visibility: visible;
+      &.is-active {
+        display: block;
+      }
+    }
+    .form-note {
+      padding-left: 1.5em;
+      position: relative;
+
+      &::before {
+        content: "※";
+        display: block;
+        font-size: 1em;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+      }
+    }
+
+    a {
+      color: var(--c-blue);
+      text-decoration: underline;
+    }
+
+    .form-group-checkbox {
+      label {
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: 700;
+
+        input[type="checkbox"] {
+          appearance: none;
+          background-color: #fff;
+          border: 0.1rem solid var(--c-gray);
+          border-radius: 0.4rem;
+          height: 2em;
+          width: 2em;
+          margin-right: 0.5em;
+
+          &:checked {
+            background-color: var(--c-green);
+            position: relative;
+            
+            &::before {
+              color: #fff;
+              content: "\e5ca";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+
+              font-family: "Material Symbols Outlined";
+              font-weight: normal;
+              font-style: normal;
+              font-size: 1.5em; /* Preferred icon size */
+              display: inline-block;
+              line-height: 1;
+              text-transform: none;
+              letter-spacing: normal;
+              word-wrap: normal;
+              white-space: nowrap;
+              direction: ltr;
+            }
+          }
+        }
       }
     }
   }

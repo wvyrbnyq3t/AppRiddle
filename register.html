@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/root.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/lib/modal.css" />
+    <link rel="stylesheet" href="./assets/css/lib/form.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Google Fontsの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Material Icon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="modal">
+      <div class="overlay"></div>
+      <div class="center">
+        <div class="modalContent" data-modal="openInNew">
+          <button type="button" class="icn icn-close btn-closeModal"></button>
+          <p>新しいタブで開きます</p>
+          <a href="" class="btn-primary w-100 link-confirm" target="_blank"
+            >開く</a
+          >
+        </div>
+        <div class="modalContent" data-modal="registerErr">
+          <p>
+            既にユーザー登録をしています。
+          </p>
+          <a href="index.html" class="btn-primary w-100">HOME に戻る</a>
+        </div>
+      </div>
+    </div>
+    <div class="pageContent">
+      <main>
+        <div class="contentBody">
+          <section>
+            <h2 class="secTitle">新規ユーザー登録</h2>
+            <div class="form">
+              <div class="form-group">
+                <label for="userName" class="form-label">ユーザーネーム</label>
+                <input
+                  type="text"
+                  name="userName"
+                  id="userName"
+                  placeholder="10文字以内"
+                  maxlength="10"
+                />
+                <div class="form-err">
+                  <p>必須項目です</p>
+                </div>
+                <p class="form-note">本名を入力しないでください。</p>
+              </div>
+              <div class="form-group">
+                <div class="form-group-checkbox">
+                  <label for="termsConsented">
+                    <input
+                      type="checkbox"
+                      name="temrsConsented"
+                      id="termsConsented"
+                      class="checkboxConsented"
+                    />
+                    <p>
+                      <a href="" target="_blank">利用規約</a>
+                      に同意します
+                    </p>
+                  </label>
+                </div>
+                <div class="form-group-checkbox">
+                  <label for="policyConsented">
+                    <input
+                      type="checkbox"
+                      name="policyConsented"
+                      id="policyConsented"
+                      class="checkboxConsented"
+                    />
+                    <p>
+                      <a href="" target="_blank">プライバシーポリシー</a>
+                      に同意します
+                    </p>
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-group-submit">
+                  <button
+                    type="button"
+                    class="btn-primary w-100"
+                    aria-disabled="true"
+                    id="btn-submit"
+                  >
+                    作成する
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/userAgent.js"></script>
+    <script src="./assets/js/register.js"></script>
+    <script src="./assets/js/lib/modal.js"></script>
+  </body>
+</html>

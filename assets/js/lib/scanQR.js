@@ -62,15 +62,6 @@ function tick() {
       if (code.data !== "") {
         isReadQR = false;
         video.srcObject = null;
-
-        // 接頭語の確認
-        const isPrefix = code.data.startsWith("WR");
-
-        if (isPrefix) {
-          alert("成功");
-        } else {
-          alert("失敗");
-        }
       }
     }
   }
