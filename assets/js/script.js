@@ -36,7 +36,6 @@ links.forEach((link) => {
 
 // 外部サイトにアクセス
 const linkConfirm = document.querySelectorAll(".link-confirm");
-
 linkConfirm.forEach((link) => {
   link.addEventListener("click", (e) => {
     const modal = document.getElementById("modal");
