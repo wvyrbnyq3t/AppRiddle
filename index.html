@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/root.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/lib/upsell.css" />
+    <link rel="stylesheet" href="./assets/css/lib/scanQR.css" />
+    <link rel="stylesheet" href="./assets/css/lib/slider.css" />
+    <link rel="stylesheet" href="./assets/css/lib/modal.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Google Fontsの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Material Icon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="upsell">
+      <div class="content bgc-red" id="scanQRErr">
+        <div class="content-header">
+          <div class="content-title">カメラ機能を有効にしてください</div>
+          <button type="button" class="btn-closeUpsell"></button>
+        </div>
+        <section>
+          <p>
+            二次元コードを読み取るためには、ブラウザのカメラ機能を有効にする必要があります。
+          </p>
+        </section>
+      </div>
+    </div>
+    <div id="slider">
+      <div class="content content-bottom" data-slider="scanQR" id="scanQR">
+        <div class="scanQRHeader content-header">
+          <button
+            type="button"
+            class="btn-closeSlider btn-pauseScanQR"
+          ></button>
+          <p class="title">二次元コードをスキャン</p>
+        </div>
+        <canvas id="scanQRCanvas"></canvas>
+      </div>
+    </div>
+    <div id="modal">
+      <div class="overlay"></div>
+      <div class="bottom">
+        <div class="content" data-modal="scanQRSuccess">
+          <section>
+            <h2 class="sec-title t-center c-red">景品を受け取りましたか？</h2>
+            <p>景品をお渡ししましたか？一度、受け取り済みを押下すると元には戻せません。</p>
+          </section>
+          <section>
+            <button type="button" class="btn-secondary btn-closeModal btn-bootScanQR w-100">
+              再スキャンする
+            </button>
+            <button type="button" class="btn-primary btn-oneTime w-100">
+              受け取り済み
+            </button>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <main>
+        <div class="contentBody">
+          <section>
+            <h2 class="sec-title">パークチケット</h2>
+            <button
+              type="button"
+              class="btn-secondary btn-openSlider btn-bootScanQR w-100"
+              data-slider="scanQR"
+            >
+              パークチケットを読み込む
+            </button>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <script src="./assets/js/lib/scanQR.js"></script>
+    <script src="./assets/js/lib/upsell.js"></script>
+    <script src="./assets/js/lib/slider.js"></script>
+    <script src="./assets/js/lib/modal.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
