@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/root.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Google Fontsの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Material Icon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-content">
+      <main>
+        <div class="contentBody">
+          <section>
+            <div class="category">
+              <div class="category-menu carousel carousel-scroller">
+                <div class="carousel-item">
+                  <a href="#message" class="badge badge-small">メッセージ関連</a>
+                </div>
+                <div class="carousel-item">
+                  <a href="#riddle" class="badge badge-small">謎解き関連</a>
+                </div>
+                <div class="carousel-item">
+                  <a href="#event" class="badge badge-small">イベント関連</a>
+                </div>
+                <div class="carousel-item">
+                  <a href="#others" class="badge badge-small">その他</a>
+                </div>
+              </div>
+              <div class="category-body">
+                <div class="empty-element" id="message"></div>
+                <section>
+                  <h2 class="sec-title">メッセージに関するトラブル</h2>
+                  <div class="container-faq">
+                    <div class="faq-title">
+                      友達登録をしたがなにも表示されない
+                    </div>
+                    <div class="faq-answer">
+                      一度 LINE 公式アカウントをブロックしてください。その後、 5 秒程度時間を明けてからブロックを解除してください。ブロック解除後、メッセージが表示されます。
+                    </div>
+                  </div>
+                  <div class="container-faq">
+                    <div class="faq-title">メッセージを送信したがなにも表示されない</div>
+                    <div class="faq-answer">システムの都合上、ユーザーがメッセージを送信してからリプライが表示されるまで 2 ~ 5 秒程度時間がかかります。これ以上待ってもリプライが表示されない場合は、再度同じメッセージを送信してください。</div>
+                  </div>
+                  <div class="container-faq">
+                    <div class="faq-title">ボタンを選択したがなにも表示されない</div>
+                    <div class="faq-answer">システムの都合上、ユーザーがボタンを選択してからリプライが表示されるまで 2 ~ 5 秒程度時間がかかります。これ以上待ってもリプライが表示されない場合は、再度同じボタンを選択してください。</div>
+                  </div>
+                  <div class="container-faq">
+                    <div class="faq-title">リンクをクリックしたが、ウェブページが表示されないまたは誤ったウェブページが表示される</div>
+                    <div class="faq-answer">選択したボタンがリンクであるかを確認してください。リンクボタンはテキストの末尾に「（外部サイト）」と表記されています。<br>リンクボタンを選択したにも関わらず、ウェブページが表示されないまたは誤ったウェブページが表示される場合は報告してください。</div>
+                  </div>
+                  <div class="container-faq">
+                    <div class="faq-title">ボタンを選択すると「無効な入力です」と表示される</div>
+                    <div class="faq-answer">システムの仕様であり、問題ありません。このメッセージが表示された場合現在そのボタンを利用することができないことを示します。</div>
+                  </div>
+                  <div class="container-faq">
+                    <div class="faq-title">
+                      スタンプを送信したが、何も表示されない
+                    </div>
+                    <div class="faq-answer">
+                      システムの仕様であり、問題ありません。スタンプメッセージには対応していません。
+                    </div>
+                  </div>
+                  <div class="container-faq">
+                    <div class="faq-title">
+                      写真を送信することができない
+                    </div>
+                    <div class="faq-answer">
+                      システムの仕様であり、問題ありません。以下のタイプのメッセージはリプライ対象外です。
+                      <ul class="list-dotted">
+                        <li class="list-item">
+                          <p>スタンプメッセージ</p>
+                        </li>
+                        <li class="list-item">
+                          <p>写真</p>
+                        </li>
+                        <li class="list-item">
+                          <p>動画</p>
+                        </li>
+                        <li class="list-item">
+                          <p>音声</p>
+                        </li>
+                        <li class="list-item">
+                          <p>連絡先</p>
+                        </li>
+                        <li class="list-item">
+                          <p>位置情報</p>
+                        </li>
+                        <li class="list-item">
+                          <p>ファイル</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+                <div id="riddle" class="empty-element">
+                  <section>
+                    <h2 class="sec-title">謎解きに関連するトラブル</h2>
+                    <div class="container-faq">
+                      <div class="faq-title">二次元コードを読み取り、メッセージを送信したが何も表示されない</div>
+                      <div class="faq-answer">
+                        <p>
+                          次のことが考えられます。
+                        </p>
+                        <ul class="list-dotted">
+                          <li class="list-item">
+                            <p>他の謎を解いている場合、新たに他の謎を表示することができません。新しい謎を表示する場合は、現在解いている謎に正解するまたは現在解いている謎を中断する必要があります。</p>
+                          </li>
+                          <li class="list-item">
+                            <p>一つ前の謎を解き終わった後に表示されたメッセージにある「次の謎を探す」を選択していない場合、新たに謎を表示することができません。メッセージを遡り、当該メッセージの「次の謎を探す」を選択したから再度に次元コードを読み取ってください。</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">掲示物に書かれている謎の番号と LINE で表示された謎の番号が異なる</div>
+                      <div class="faq-answer">システムの設定ミスです。速やかに報告してください。</div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">答えを送信したが「答えが違います」と表示される</div>
+                      <div class="faq-answer">適当な答えであるか確認してください。答えをメッセージ入力欄に入力して送信する場合は指定がない場合を除きすべてひらがなで入力してください。また、入力した答えに不要なスペースや改行が含まれている場合、不正解として扱われます。</div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">ヒントが欲しい</div>
+                      <div class="faq-answer">トーク画面のメッセージ入力欄に「ひんと」と入力し送信するか、トーク画面下部に表示されるメニューから「ヒントを表示」を選択してください。</div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">現在解いている謎を中断したい</div>
+                      <div class="faq-answer">トーク画面のメッセージ入力欄に「あきらめる」と入力し送信してください。</div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">誤って解いている謎を中断してしまった</div>
+                      <div class="faq-answer">お手数ですが、もう一度二次元コードを読み取ってください。</div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">一つの謎に複数回解答することができるが問題ないか</div>
+                      <div class="faq-answer">システムの仕様であり、問題ありません。ただし、キーワードを取得することができるのは当該問題に初めて正解した時のみです。</div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">キーワードを 13 個すべて集めたが、最終問題が表示されない</div>
+                      <div class="faq-answer">
+                        <p>
+                          恐れ入りますが、案内イベントブースにお越しください。
+                        </p>
+                        <a href="" class="btn-secondary w-100">キャンパスマップ </a>
+                      </div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">謎解きの問題の解答が見たい</div>
+                      <div class="faq-answer">
+                        <p>
+                          現在、検討中です。
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+                  <div id="event" class="empty-element"></div>
+                  <section>
+                    <h2 class="sec-title">謎解きに関するトラブル</h2>
+                    <div class="container-faq">
+                      <div class="faq-title">
+                        イベントを途中で終了したい
+                      </div>
+                      <div class="faq-answer">
+                        <p>
+                          トーク画面のメッセージ入力欄に「しゅうりょう」と入力して送信してください。画面に表示される注意事項を確認し同意した上で画面の指示に従ってください。
+                        </p>
+                        <p class="c-red">一度イベントを終了してしまうと、再度イベントに参加することができません。</p>
+                      </div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">誤ってイベントを終了してしまった</div>
+                      <div class="faq-answer">
+                        <p>
+                          お手数ですが、案内イベントブースにお越しください。
+                        </p>
+                        <a href="" class="btn-secondary w-100">キャンパスマップ</a>
+                      </div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">イベントにもう一度参加したい</div>
+                      <div class="faq-answer">
+                        現在、検討中です。
+                      </div>
+                    </div>
+                  </section>
+                  <div id="others" class="empty-element"></div>
+                  <section>
+                    <h2 class="sec-title">その他トラブル</h2>
+                    <div class="container-faq">
+                      <div class="faq-title">LINE の大規模通信障害が発生した</div>
+                      <div class="faq-answer">
+                        <p>
+                          対応については未定です。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="container-faq">
+                      <div class="faq-title">ユーザーデータを削除して欲しい</div>
+                      <div class="faq-answer">
+                        <p>
+                          お手数ですが、案内イベントブースにお越しください。
+                        </p>
+                        <p>次のユーザーデータについては削除することができますが、不正防止のためユーザー ID はイベント当日に削除することができません。</p>
+                        <p>※ここでのユーザー ID とは LINE 公式アカウントを登録している LINE アカウントをユニークに識別するための文字列です。ユーザーが LINE に登録しているユーザー ID ではありません。</p>
+                        <a href="" class="btn-secondary w-100">キャンパスマップ</a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
