@@ -31,6 +31,12 @@ body {
   main {
     .contentBody {
       padding: var(--gutter);
+      
+      .page-title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: var(--gutter);
+      }
     }
   }
 }
