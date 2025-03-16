@@ -5,16 +5,16 @@
 
   .container-faq-question {
     color: var(--c-primary);
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: calc(var(--gutter) * 0.5);
-    padding-left: calc(1.25em + 0.75rem);
+    padding-left: calc(1em + 0.75rem);
     position: relative;
 
     &::before {
       content: "Q.";
       display: block;
-      font-size: 1.25em;
+      font-size: 1em;
       font-weight: 700;
       position: absolute;
       top: 50%;
