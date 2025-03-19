@@ -30,7 +30,7 @@ body {
 
   main {
     .contentBody {
-      padding: var(--gutter);
+      padding: calc(var(--gutter) + env(safe-area-inset-top)) var(--gutter) calc(var(--gutter) + env(safe-area-inset-bottom));
 
       .page-title {
         font-size: 2.4rem;
