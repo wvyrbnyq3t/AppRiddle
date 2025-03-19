@@ -31,7 +31,7 @@ body {
   main {
     .contentBody {
       padding: var(--gutter);
-      
+
       .page-title {
         font-size: 2.4rem;
         font-weight: 700;
@@ -159,6 +159,13 @@ section {
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat(2, 1fr);
+}
+
+/* divider */
+.divider-bottom {
+  border-bottom: 0.1rem solid var(--c-gray);
+  padding-bottom: var(--gutter) !important;
+  margin-bottom: var(--gutter) !important;
 }
 
 /* icon style */
