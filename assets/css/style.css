@@ -36,6 +36,7 @@ body {
         font-size: 2.4rem;
         font-weight: 700;
         margin-bottom: var(--gutter);
+        text-align: center;
       }
     }
   }
@@ -45,6 +46,7 @@ section {
   &:not(:last-child) {
     margin-bottom: var(--gutter);
   }
+
   > *:not(:last-child) {
     margin-bottom: calc(var(--gutter) * 0.75);
   }
@@ -100,6 +102,16 @@ section {
     background-color: var(--c-gray);
     cursor: not-allowed;
   }
+
+  &[target="_blank"] {
+    &:after {
+      content: "\e89e";
+      display: inline-block;
+      font-family: "Material Symbols Outlined";
+      font-size: 1em;
+      margin-left: 0.5em;
+    }
+  }
 }
 
 .btn-secondary {
@@ -120,6 +132,31 @@ section {
     border-color: var(--c-gray);
     color: var(--c-gray);
     cursor: not-allowed;
+  }
+
+  &[target="_blank"] {
+    position: relative;
+
+    &:after {
+      content: "\e89e";
+      display: block;
+      font-family: "Material Symbols Outlined";
+      font-size: 1.5em;
+
+      direction: ltr;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-height: 1;
+      text-transform: none;
+      white-space: nowrap;
+      word-wrap: normal;
+
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: var(--gutter);
+    }
   }
 }
 
@@ -142,6 +179,10 @@ section {
     box-shadow: 0 0 0.1rem #333;
     scroll-snap-align: center;
     width: 100%;
+
+    .txtBox {
+      padding: calc(var(--gutter) * 0.75);
+    }
   }
 }
 .carousel-scroller {
@@ -165,6 +206,16 @@ section {
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat(2, 1fr);
+}
+
+.column-wrap-pc {
+  display: grid;
+  gap: calc(var(--gutter) * 0.5);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gutter);
+  }
 }
 
 /* divider */
@@ -255,6 +306,33 @@ section {
   @media (max-width: 768px) {
     display: none;
   }
+}
+
+/* margin */
+.mrgn-top {
+  margin-top: var(--gutter);
+}
+.mrgn-right {
+  margin-right: var(--gutter);
+}
+.mrgn-bottom {
+  margin-bottom: var(--gutter);
+}
+.mrgn-left {
+  margin-left: var(--gutter);
+}
+
+.mrgn-top-half {
+  margin-top: calc(var(--gutter) * 0.5);
+}
+.mrgn-right-half {
+  margin-right: calc(var(--gutter) * 0.5);
+}
+.mrgn-bottom-half {
+  margin-bottom: calc(var(--gutter) * 0.5);
+}
+.mrgn-left-half {
+  margin-left: calc(var(--gutter) * 0.5);
 }
 
 /* text style */

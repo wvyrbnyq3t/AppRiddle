@@ -22,6 +22,7 @@ modalOpen.forEach((btn) => {
       const content = modal.querySelector(`.content[data-modal="${field}"]`);
 
       if (content) {
+        document.body.classList.add("is-active");
         modal.classList.add("is-active");
         content.classList.add("is-show");
       }

@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/lib/upsell.css" />
-    <link rel="stylesheet" href="./assets/css/lib/scanQR.css" />
-    <link rel="stylesheet" href="./assets/css/lib/slider.css" />
     <link rel="stylesheet" href="./assets/css/lib/modal.css" />
     <meta
       name="viewport"
@@ -30,90 +27,127 @@
     />
   </head>
   <body>
+    <div id="modal">
+      <div class="overlay"></div>
+      <div class="center">
+        <div class="content" id="openInNew">
+          <section>
+            <p class="fw-bold t-center">新しいタブで開きます</p>
+            <div class="column-wrap-pc">
+              <button type="button" class="btn-secondary btn-closeModal w-100" id="btnLinkConfirmOpenInNew">閉じる</button>
+              <a href="" class="btn-primary w-100">開く</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
     <div class="page-content">
       <main>
         <div class="contentBody">
-          <h1 class="page-title c-purple t-center">遊び方</h1>
-          <div class="divider-bottom">
-            <section>
-              <h2 class="sec-title">1. 準備しよう！</h2>
-              <div class="container">
-                <p>企画実行委員会イベントブースで謎解きの準備をしよう</p>
+          <section>
+            <h1 class="page-title">遊び方</h1>
+          </section>
+          <section>
+            <div class="carousel carousel-banner">
+              <div class="carousel-item">
+                <div class="imgBox">
+                  <img
+                    src="https://media1.tokyodisneyresort.jp/images/adventure/rid_menu_feature/7367d7887138c3b_banner_image.jpg?mod=19700101090000"
+                    alt=""
+                  />
+                </div>
+                <div class="txtBox">
+                  <p class="fs-medium fw-bold mrgn-bottom-half">1. 準備をしよう！</p>
+                  <p>
+                    企画実行委員会イベントブースでイベントに参加するための準備をしよう！
+                  </p>
+                  <div class="container mrgn-top">
+                    <p class="fw-bold">必要なもの</p>
+                    <ul class="list-dotted">
+                      <li class="list-item">
+                        <p>
+                          コミュニケーションアプリ『LINE』がインストールされたスマートフォン端末
+                        </p>
+                      </li>
+                      <li class="list-item">
+                        <p>LINE アカウント</p>
+                      </li>
+                      <li class="list-item">
+                        <p>筆記用具</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="container">
-                <p class="fs-medium fw-bold">必要なもの</p>
-                <ul class="list-dotted">
-                  <li class="list-item">
-                    <p>スマートフォン端末</p>
-                  </li>
-                  <li class="list-item">
-                    <p>LINE アカウント</p>
-                  </li>
-                  <li class="list-item">
-                    <p>筆記用具</p>
-                  </li>
-                </ul>
+              <div class="carousel-item">
+                <div class="imgBox">
+                  <img
+                    src="https://media1.tokyodisneyresort.jp/images/adventure/rid_menu_feature/7367d7887138c3b_banner_image.jpg?mod=19700101090000"
+                    alt=""
+                  />
+                </div>
+                <div class="txtBox">
+                  <p class="fs-medium fw-bold mrgn-bottom-half">2. 謎を探しにキャンパスを探検しよう！</p>
+                  <p>キャンパスを探検しながら、隠された謎を見つけよう！</p>
+                  <p>
+                    謎を見つけた二次元コードを読み取ってメッセージを送信しよう！
+                  </p>
+                </div>
               </div>
-            </section>
-            <section>
-              <h2 class="sec-title">2. 謎を探しにキャンパスを探検しよう</h2>
-              <div class="container">
-                <p>キャンパスを探検しながら、隠された謎を見つけよう！</p>
+              <div class="carousel-item">
+                <div class="imgBox">
+                  <img
+                    src="https://media1.tokyodisneyresort.jp/images/adventure/rid_menu_feature/7367d7887138c3b_banner_image.jpg?mod=19700101090000"
+                    alt=""
+                  />
+                </div>
+                <div class="txtBox">
+                  <p class="fs-medium fw-bold mrgn-bottom-half">3. 見つけた謎を解読しよう！</p>
+                  <p>見つけた謎を解読して答えを送信しよう！</p>
+                  <p>答えが合ってると、キーワードをゲットできるよ</p>
+                  <p>ヒントが欲しい場合は「ひんと」と送信するか、メニューから「ヒントを表示」を選んでね</p>
+                  <p>合計 13 個のキーワードをゲットすると最終問題に挑戦できるよ</p>
+                </div>
               </div>
-            </section>
-            <section>
-              <h2 class="sec-title">3. 謎を解読しよう</h2>
-              <div class="container">
-                <p>ゲットした謎を解読しよう！</p>
-                <p>どうしても解読できない時はヒントを活用しよう！</p>
-                <p>
-                  「ひんと」と送信するか、メニューから「ヒントを表示する」を選択するとヒントを見れるよ
-                </p>
-                <p>解読に成功するとキーワードをゲットできるよ</p>
-                <p>
-                  合計 13 個のキーワードをゲットすると最終問題に挑戦できるよ
-                </p>
+              <div class="carousel-item">
+                <div class="imgBox">
+                  <img
+                    src="https://media1.tokyodisneyresort.jp/images/adventure/rid_menu_feature/7367d7887138c3b_banner_image.jpg?mod=19700101090000"
+                    alt=""
+                  />
+                </div>
+                <div class="txtBox">
+                  <p class="fs-medium fw-bold mrgn-bottom-half">4 最終問題に挑戦</p>
+                  <p>これまでに解いた問題や集めたキーワードを使って最終問題に挑戦しよう！</p>
+                </div>
               </div>
-            </section>
-            <section>
-              <h2 class="sec-title">4. 最終問題に挑戦</h2>
-              <div class="container">
-                <p>キーワードを使って最終問題に挑戦しよう！</p>
+              <div class="carousel-item">
+                <div class="imgBox">
+                  <img
+                    src="https://media1.tokyodisneyresort.jp/images/adventure/rid_menu_feature/7367d7887138c3b_banner_image.jpg?mod=19700101090000"
+                    alt=""
+                  />
+                </div>
+                <div class="txtBox">
+                  <p class="fs-medium fw-bold mrgn-bottom-half">5. イベントクリア</p>
+                  <p>最終問題に正解すると、イベントクリア！</p>
+                  <p>企画実行委員会イベントブースでガラポンを回して景品を受け取ろう！</p>
+                </div>
               </div>
-            </section>
-            <section>
-              <h2 class="sec-title">5. イベントクリア</h2>
-              <div class="container">
-                <p>
-                  企画実行委員会イベントブースでがらぽんを回して景品を受け取ろう！
-                </p>
-              </div>
-            </section>
-            <a
-              href="https://welcome.hosei-u.com/map/"
-              class="btn-secondary w-100"
-              >キャンパスマップ</a
-            >
-          </div>
-          <div class="divider-bottom">
-            <section>
-              <h2 class="sec-title">
-                途中でイベントを終了する場合
-              </h2>
-              <div class="container">
-                <p>イベントを途中で終了する場合は、<b class="c-red">トーク画面のメッセージ入力欄に「しゅうりょう」と入力し送信</b>してください。表示されるメッセージに従ってイベントを終了してください。</p>
-                <p>なお、一度イベントを終了してしまうと同日中に再度イベントに参加することができません。</p>
-              </div>
-            </section>
-          </div>
-          <div>
-            <section>
-              <h2 class="sec-title">
-                よくある質問
-              </h2>
-              <a href="faq.html" class="btn-secondary w-100">よくある質問</a>
-            </section>
-          </div>
+            </div>
+            <a href="https://welcome.hosei-u.com/map/" class="btn-secondary w-100" target="_blank">キャンパスマップ</a>
+          </section>
+          <section>
+            <h2 class="sec-title">途中でイベントを終了する場合</h2>
+            <div class="container">
+              <p>イベントを途中で終了する場合はトーク画面のメッセージ入力欄に「しゅうりょう」と入力して送信してください。画面に表示されるメッセージに従ってイベントを終了してください。</p>
+              <p>一度イベントを終了してしまうと、同日中に再度イベントに参加することができません。ご注意ください。</p>
+            </div>
+          </section>
+          <section>
+            <h2 class="sec-title">よくある質問</h2>
+            <a href="faq.html" class="btn-secondary w-100">よくある質問</a>
+          </section>
         </div>
       </main>
     </div>
@@ -123,5 +157,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/lib/modal.js"></script>
   </body>
 </html>

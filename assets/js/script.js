@@ -9,14 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// 高さ調整
-const adjustHeight = () => {
-  // カテゴリー
-  const category = document.querySelector(".category");
-  const categoryMenuHeght = category.querySelector(".category-menu").offsetHeight;
-  category.setAttribute("style", `--height: ${categoryMenuHeght}px`);
-}
+// 新しいタブで開く　確認画面
+const btnLinkOpenInNew = document.querySelectorAll("a[target='_blank']");
+const modalOpenInNew = document.getElementById("openInNew");
+btnLinkOpenInNew.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-window.addEventListener("DOMContentLoaded", () => {
-  adjustHeight();
+    const target = e.target;
+    const link = target.getAttribute("href");
+
+    document.body.classList.add("is-active")
+    modal.classList.add("is-active");
+    modalOpenInNew.classList.add("is-show");
+  })
 })
+
+// 新しいタブで開く　実行

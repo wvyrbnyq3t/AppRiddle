@@ -51,15 +51,6 @@
       &.is-show {
         visibility: visible;
       }
-
-      .btn-closeModal {
-        height: 0;
-        margin-left: auto;
-        position: sticky;
-        top: 1.6rem;
-        left: 0;
-        z-index: 110;
-      }
     }
   }
   .bottom {
