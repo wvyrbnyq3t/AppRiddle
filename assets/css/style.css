@@ -46,12 +46,11 @@ section {
     margin-bottom: var(--gutter);
   }
   > *:not(:last-child) {
-    margin-bottom: calc(var(--gutter) * 0.5);
+    margin-bottom: calc(var(--gutter) * 0.75);
   }
   .sec-title {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: var(--gutter) !important;
   }
 }
 
@@ -283,6 +282,18 @@ section {
 }
 
 /* text color */
+.c-blue {
+  color: var(--c-blue) !important;
+}
+.c-green {
+  color: var(--c-green) !important;
+}
+.c-orange {
+  color: var(--c-orange) !important;
+}
+.c-purple {
+  color: var(--c-purple) !important;
+}
 .c-red {
   color: var(--c-red) !important;
 }

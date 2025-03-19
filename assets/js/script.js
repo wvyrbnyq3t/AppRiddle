@@ -9,10 +9,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// 一度だけ押下することができるボタン
-const btnOneTime = document.querySelectorAll(".btn-oneTime");
-btnOneTime.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btn.setAttribute("aria-disabled", true);
-  })
-})
+// 新しいウィンドウで開く
