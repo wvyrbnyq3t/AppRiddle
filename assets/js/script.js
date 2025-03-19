@@ -9,4 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// 新しいウィンドウで開く
+// 高さ調整
+const adjustHeight = () => {
+  // カテゴリー
+  const category = document.querySelector(".category");
+  const categoryMenuHeght = category.querySelector(".category-menu").offsetHeight;
+  category.setAttribute("style", `--height: ${categoryMenuHeght}px`);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  adjustHeight();
+})
