@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // 新しいタブで開く　確認画面
 const btnLinkOpenInNew = document.querySelectorAll("a[target='_blank']");
+const btnLinkConfirmOpenInNew = document.getElementById("btnLinkConfirmOpenInNew");
 const modalOpenInNew = document.getElementById("openInNew");
+
 btnLinkOpenInNew.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -22,7 +24,17 @@ btnLinkOpenInNew.forEach((btn) => {
     document.body.classList.add("is-active")
     modal.classList.add("is-active");
     modalOpenInNew.classList.add("is-show");
+    btnLinkConfirmOpenInNew.setAttribute("href", link);
   })
 })
 
 // 新しいタブで開く　実行
+btnLinkConfirmOpenInNew.addEventListener("click", (e) => {
+  e.preventDefault();
+  const link = btnLinkConfirmOpenInNew.getAttribute("href");
+  window.open(link, "_blank");
+
+  modalOpenInNew.classList.remove("is-show");
+
+  getCountModalWindows();
+})
