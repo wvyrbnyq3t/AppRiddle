@@ -19,3 +19,26 @@
     }
   }
 }
+
+/* FAQ */
+.faq-container {
+  .faq-question {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding-left: 1.5em;
+    position: relative;
+
+    &::before {
+      content: "Q.";
+      font-size: 1em;
+      font-weight: 700;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+  }
+  .faq-answer {
+    margin-top: calc(var(--gutter) * 0.5);
+  }
+}
