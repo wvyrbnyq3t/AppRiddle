@@ -42,3 +42,20 @@
     margin-top: calc(var(--gutter) * 0.5);
   }
 }
+
+/* carousel */
+.carousel-dotted {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gutter) * .5);
+  margin: 0 auto;
+  width: fit-content;
+
+  a {
+    background-color: var(--c-primary);
+    border-radius: 99rem;
+    display: block;
+    height: 1em;
+    width: 1em;
+  }
+}
