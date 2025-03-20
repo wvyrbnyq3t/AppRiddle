@@ -38,3 +38,20 @@ btnLinkConfirmOpenInNew.addEventListener("click", (e) => {
 
   getCountModalWindows();
 })
+
+// 高さ調整
+const adjustDesign = () => {
+  // カテゴリー
+  const categories = document.querySelectorAll(".category");
+
+  categories.forEach((element) => {
+    const categoryMenu = element.querySelector(".category-menu");
+    const height = categoryMenu.offsetHeight;
+
+    element.setAttribute("style", `--height: ${height}px`);
+  })
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  adjustDesign();
+})

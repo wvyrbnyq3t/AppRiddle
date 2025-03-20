@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/lib/modal.css" />
+    <link rel="stylesheet" href="style.css">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
@@ -27,9 +28,71 @@
     />
   </head>
   <body>
+    <div id="modal">
+      <div class="overlay"></div>
+      <div class="center">
+        <div class="content" id="openInNew">
+          <section>
+            <p class="fw-bold t-center">新しいタブで開きます</p>
+            <div class="column-wrap-pc">
+              <button type="button" class="btn-secondary btn-closeModal w-100">
+                閉じる
+              </button>
+              <a class="btn-primary w-100" id="btnLinkConfirmOpenInNew">開く</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
     <div class="page-content">
       <main>
-        <div class="contentBody"></div>
+        <div class="contentBody">
+          <section>
+            <h1 class="page-title">よくある質問</h1>
+          </section>
+          <section>
+            <div class="category">
+              <div class="category-menu">
+                <div class="carousel carousel-scroller">
+                  <div class="carousel-item">
+                    <a href="#event" class="badge">イベントに関する質問</a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#riddle" class="badge">謎解きに関する質問</a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#system" class="badge">LINE やシステムに関する質問</a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#others" class="badge">その他</a>
+                  </div>
+                </div>
+              </div>
+              <div class="category-main">
+                <section class="category-content" id="event">
+                  <h2 class="sec-title">
+                    イベントに関する質問
+                  </h2>
+                </section>
+                <section class="category-content" id="riddle">
+                  <h2 class="sec-title">
+                    謎解きに関する質問
+                  </h2>
+                </section>
+                <section class="category-content" id="system">
+                  <h2 class="sec-title">
+                    LINE やシステムに関する質問
+                  </h2>
+                </section>
+                <section class="category-content" id="others">
+                  <h2 class="sec-title">
+                    その他
+                  </h2>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
     </div>
     <script

@@ -1,0 +1,21 @@
+.category {
+  height: 100%;
+  position: relative;
+
+  .category-menu {
+    padding: calc(0.5rem + env(safe-area-inset-top)) 0 0.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .category-main {
+    margin: var(--gutter) 0 0;
+
+    .category-content {
+      padding-top: var(--height);
+      margin-top: calc(-1 * var(--height));
+    }
+  }
+}
